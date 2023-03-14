@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="/manifest.json">  
+  <style>
+   
+  body {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: #00507f;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 15px;
+    line-height: 28px;
+    letter-spacing: 1px;
+  }
+  /* 複寫區 */
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+  h2 {
+    margin: 0;
+    margin-bottom: 25px;
+    font-weight: 400;
+  }
+  h2::after {
+    content: " ";
+    display: inline-block;
+    width: 28px;
+    height: 8px;
+    background-color: #ff68de;
+    margin-left: 10px;
+  }
+  h4 {
+    margin: 0;
+    margin-bottom: 40px;
+    opacity: 0.8;
+    font-weight: 400;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  hr {
+    border: none;
+    border-bottom: solid 4px #ff68de;
+    width: 80%;
+    margin-left: 0;
+  }
+  .resume {
+    display: flex;
+    max-width: 950px;
+    border: solid 8px white;
+    padding: 50px;
+    position: relative;
+  }
+  .left {
+    padding-right: 50px;
+    border-right: solid 1px #ff68de;
+  }
+  .left {
+    flex: 5;
+  }
+  .right {
+    flex: 7;
+  }
+  .right {
+    padding-left: 50px;
+    padding-top: 150px;
+  }
+   /* .left, */
+  /* .right { */
+    /*   padding: 15px; */
+  /* }  */
+  .decoration {
+    width: 300px;
+    height: 140px;
+    background: linear-gradient(135deg, #ff68de, #68ccff);
+    border-radius: 70px 0px 0px 70px;
+    position: absolute;
+    right: 0;
+    top: 50px;
+  }
+  .listExperience > li {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  .listExperience > li:nth-child(1) ul {
+    border-color: #ff68de;
+  }
+  .listExperience > li:nth-child(2) ul {
+    border-color: #ff7ce0;
+  }
+  .listExperience > li:nth-child(3) ul {
+    border-color: #ffa8e9;
+  }
+  .listExperience > li:nth-child(4) ul {
+    border-color: #ffddf6;
+  }
+  .listExperience li ul {
+    padding-left: 10px;
+    margin-left: 10px;
+    border-left: solid 1px white;
+  }
+  
+  /* list Skill */
+  .listSkill {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .listSkill li {
+    width: 25%;
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .circle {
+    width: 50px;
+    height: 50px;
+    background-color: #00507f;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(255, 104, 222, 0.4);
+  }
+  .circle::after {
+    content: " ";
+    display: block;
+    background-color: #00507f;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .p90,
+  .p180,
+  .p270,
+  .p360 {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    background-color: #ff68de;
+  }
+  .p180 {
+    top: 50%;
+  }
+  .p270 {
+    left: 0;
+    top: 50%;
+  }
+  .p360 {
+    left: 0;
+    top: 0;
+  }
+  /* list program */
+  .listProgram .bar {
+    width: 150px;
+    height: 10px;
+    border: solid 2px #ff68de;
+    border-radius: 5px;
+  }
+  .listProgram li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+  }
+  .value {
+    width: 60%;
+    height: 100%;
+    background-color: #ff68de;
+  }
+  .value.p10 {
+    width: 10%;
+  }
+  .value.p20 {
+    width: 20%;
+  }
+  .value.p30 {
+    width: 30%;
+  }
+  .value.p40 {
+    width: 40%;
+  }
+  .value.p50 {
+    width: 50%;
+  }
+  .value.p60 {
+    width: 60%;
+  }
+  .value.p70 {
+    width: 70%;
+  }
+  .value.p80 {
+    width: 80%;
+  }
+  .value.p90 {
+    width: 90%;
+  }
+  .value.p100 {
+    width: 100%;
+  }
+  .btn {
+    border: solid 3px #ff68de;
+    padding: 5px 20px;
+    margin-right: 10px;
+  }
+  .fill {
+    background-color: #ff68de;
+  }
+  @media screen and (min-width:375px) and (max-width: 700px){
+    .decoration {
+    width: 150px;
+    height: 70px;
+    background: linear-gradient(135deg, #68ff68, #065a84);
+    border-radius: 70px 0px 0px 70px;
+    position: absolute;
+    right: 0;
+    top: 50px;
+  }
+  }
+    </style>
+      <title>Document</title>
+</head>
+<body>
+  <!-- <script>
+    if ('serviceWorker' in navigator) {
+      // Register a service worker hosted at the root of the
+      // site using the default scope.
+      navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+        console.log('Service worker registration succeeded:', registration);
+      }, /*catch*/ function(error) {
+        console.log('Service worker registration failed:', error);
+      });
+    } else {
+      console.log('Service workers are not supported.');
+    }
+  </script> -->
+  <div class="resume">
+    <div class="left">
+      <h1>施承鑌</h1>
+      <h4>業務 | 實習生 </h4>
+      <hr>
+      <p>在永豐金、錠嵂保經、創科資訊擔任過實習生，擁有許多金融證照，如:證券商業務員、銀行內部控制與稽核、信託業務人員、壽險業務員等證照</p>
+      <div class="buttons">
+        <a class="btn fill"  target="_blank">作品集</a>
+        <a class="btn"  target="_blank">CV</a>
+      </div>
+      <div class="block">
+        <p></p>
+        <p></p>
+        <div class="h4">Skills</div>
+        <h2>專業技能</h2>
+        <ul class="listSkill">
+          <li>
+            <div class="circle">
+              <div class="p90"></div>
+              <div class="p180"></div>
+              <div class="p270"></div>
+              <div class="p360"></div>
+            </div>
+            基礎語法(html/js)
+          </li>
+          <li>
+            <div class="circle">
+              <div class="p90"></div>
+              <div class="p180"></div>
+              <div class="p270"></div>
+              <div class="p360"></div>
+
+            </div>
+            SQL
+          </li>
+          
+  
+        </ul>
+      </div>
+      <div class="block">
+        <div class="h4">Other Skills</div>
+        <h2>專長</h2>
+        <ul class="listProgram">
+          <li>部門溝通
+            <div class="bar">
+              <div class="value p100"></div>
+            </div>
+          </li>
+          <li>問題解決
+            <div class="bar">
+              <div class="value p100"></div>
+            </div>
+          </li>
+        
+          <li>創意與執行力
+            <div class="bar">
+              <div class="value p100"></div>
+          </li>
+         
+  
+        </ul>
+      </div>
+    </div>
+    <div class="right">
+      <div class="decoration"></div>
+      <div class="block">
+        <div class="h4">Experiences</div>
+        <h2>經歷</h2>
+        <ul class="listExperience">
+          <li class="year">2020.09永豐金
+            <ul>
+              <li>1.和客戶溝通聯繫，做客戶溝通橋梁。</li>
+              <li>2.金融商品問題處理。</li>
+              
+            </ul>
+          </li>
+          <li class="year">2019.09錠嵂
+            <ul>
+              <li>保單條款說明</li>
+              <li>保單健診</li>
+            </ul>
+          </li>
+         
+      </div>
+      <div class="block">
+        <div class="h4">Contact</div>
+        <h2>聯絡方式</h2>
+        <ul>
+          <li>
+            <a href="contact@memes.com" target="_blank">contact@memes.com</a>
+          </li>
+          <li>(+886) 987-987687</li>
+          <li>Line ID：LOVE1233</li>
+        </ul>
+      </div>
+    </div>
+  </div>    
+</body>
+</html>
+
