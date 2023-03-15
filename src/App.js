@@ -7,7 +7,7 @@ import Home from './pages/resume';
 function App() {
   return (
     <>
-    <div className='rounded-3xl drop-shadow-md  max-w-4xl mx-auto '>
+    <div className='resume '>
       <HashRouter >
         <Routes>
           <Route path="/" element={<Home />} />

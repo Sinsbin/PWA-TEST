@@ -37,12 +37,12 @@
    "density": "4.0"
   }
  ],
-    "theme_color": "#f69435",
-    "background_color": "#e8e8e8",
+    "theme_color": "#000000",
+    "background_color": "#000000",
     "display": "standalone",
     "scope": "/",
     "start_url": ".",
-    "name": "Introduce myself",
-    "short_name": "Introduction",
+    "name": "PWA",
+    "short_name": "PWA",
     "prefer_related_applications": false
 }
