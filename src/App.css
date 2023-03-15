@@ -252,10 +252,10 @@ hr {
 .fill {
   background-color: #ff68de;
 }
-@media screen and (min-width:375px) and (max-width: 840px){
+@media screen and (min-width:375px) and (max-width: 740px){
   .decoration {
-  width: 150px;
-  height: 70px;
+  width: 200px;
+  height: 150px;
   background: linear-gradient(135deg, #68ff68, #065a84);
   border-radius: 70px 0px 0px 70px;
   position: absolute;
