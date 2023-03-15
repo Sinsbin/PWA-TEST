@@ -7,13 +7,12 @@ import Home from './pages/resume';
 function App() {
   return (
     <>
-    <div className='resume '>
       <HashRouter >
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
       </HashRouter>
-    </div>
+    
   </>
   );
 }

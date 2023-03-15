@@ -252,7 +252,7 @@ hr {
 .fill {
   background-color: #ff68de;
 }
-@media screen and (min-width:375px) and (max-width: 700px){
+@media screen and (min-width:375px) and (max-width: 840px){
   .decoration {
   width: 150px;
   height: 70px;
